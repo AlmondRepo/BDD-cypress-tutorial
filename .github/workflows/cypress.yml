@@ -18,17 +18,8 @@ jobs:
       - name: Install dependencies
         run: npm install
 
-      - name: Start the app
-        run: npm run start
-        env:
-          CI: true
-
-      #   - name: Wait for app to start
-      #     uses: jakejarvis/wait-action@master
-      #     with:
-      #       wait-on: https://cypress-course-apps-signup.vercel.app
-      #       timeout: 60
-      #       time: 10
-
       - name: Run Cypress tests
         run: npm run test:e2e
+
+      - name: Start the app
+        run: npm run start
