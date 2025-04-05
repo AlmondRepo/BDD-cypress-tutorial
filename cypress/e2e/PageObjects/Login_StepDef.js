@@ -9,7 +9,7 @@ When("I enter valid credentials", () => {
   cy.get(".password").type("Password123!");
 });
 
-When("I select the user and accept the terms and conditions", () => {
+When("I select thes user and accept the terms and conditions", () => {
   cy.get("select").select("User");
   cy.get("#check-me").check();
 });

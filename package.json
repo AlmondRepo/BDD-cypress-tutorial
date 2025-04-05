@@ -3,7 +3,8 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test:e2e": "npx cypress run"
+    "test:e2e": "npx cypress run",
+    "start": "node index.js"
   },
   "author": "",
   "license": "ISC",
