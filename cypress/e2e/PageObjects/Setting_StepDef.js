@@ -17,6 +17,6 @@ When(`I click on the "Back to Dashboard" back button`, () => {
   cy.get("#back-to-dashboard-settings").click();
 });
 
-Then("I should be redirected to the dashboard", () => {
+Then("I should be redirected to the dashboard page", () => {
   cy.url().should("include", "/dashboard");
 });

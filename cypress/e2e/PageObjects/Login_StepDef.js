@@ -9,12 +9,12 @@ When("I enter valid credentials", () => {
   cy.get(".password").type("Password123!");
 });
 
-When("I select the user and accept the terms and conditions", () => {
+And("I select the user and accept the terms and conditions", () => {
   cy.get("select").select("User");
   cy.get("#check-me").check();
 });
 
-When("I click the login button", () => {
+And("I click the login button", () => {
   cy.get(".btn-submit").click();
 });
 
