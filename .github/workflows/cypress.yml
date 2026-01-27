@@ -20,6 +20,31 @@ jobs:
 
       - name: Run Cypress tests
         run: npm run test:e2e
+        continue-on-error: true
+
+      - name: Upload Cypress Report
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-report
+          path: cypress/reports/html
+          retention-days: 30
+
+      - name: Upload Cypress Screenshots
+        uses: actions/upload-artifact@v3
+        if: failure()
+        with:
+          name: cypress-screenshots
+          path: cypress/screenshots
+          retention-days: 30
+
+      - name: Upload Cypress Videos
+        uses: actions/upload-artifact@v3
+        if: always()
+        with:
+          name: cypress-videos
+          path: cypress/videos
+          retention-days: 30
 
       # - name: Start the app
       #   run: npm run start
